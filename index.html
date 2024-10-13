@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div>
+<h1 class="student-management">Student Management System</h1>
+</div>
+<!-- Form to add student -->
+ <div class="status-fo-student-div">
+    <div class="flex-align-input">
+<input type="text" id="studentName" placeholder="Student Name" required class="student-name">
+<input type="number" id="rollNumber" placeholder="Roll Number" required class="student-name"> <!-- Roll Number Field -->
+<input type="number" id="age" placeholder="Age" required class="student-name">
+<input type="number" id="grade" placeholder="Grade" required class="student-name">
+</div>
+</div>
+<!-- Date input for attendance -->
+ <div>
+    <div class="second-date-div-main">
+<input type="date" id="attendanceDate" class="date-main" required />
+
+<!-- Dropdown to select present/absent status -->
+<select id="status" class="date-main1">
+    <option value="Present">Present</option>
+    <option value="Absent">Absent</option>
+</select>
+
+<button onclick="addStudent()" class="date-main2">Add Student</button>
+</div>
+</div>
+<button class="save-button" onclick="saveAttendance()">Save Attendance</button> <!-- Button to save attendance -->
+<button class="clear-button" onclick="clearAllData()">Clear All Data</button> <!-- Button to clear all data -->
+
+<!-- Table displaying student list -->
+<table id="studentTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th> <!-- Roll Number Column -->
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Status</th>
+            <th>Attendance Date</th> <!-- Date Column -->
+            <th>Action</th> <!-- Action Column -->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows will be added here dynamically -->
+    </tbody>
+</table>
+
+<p class="absent-p-tag">Total Absent Students: <span id="absentCount">0</span></p>
+<p class="absent-p-tag">Total Present Students: <span id="presentCount">0</span></p>
+
+<div class="action-buttons">
+    <input type="date" class="cheack-date-input" id="checkDate" />
+    <button onclick="checkAttendance()" class="check-atendence-selected-date">Check Attendance for Selected Date</button>
+</div>
+
+<!-- Display selected date's attendance in a table format -->
+<div id="attendanceResult" style="margin-top: 20px;">
+    <p class="selected-date">Attendance for Selected Date:</p>
+    <table id="attendanceTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="attendanceBody">
+            <!-- Attendance records will be added here dynamically -->
+        </tbody>
+    </table>
+    <p id="noDataMessage" class="notada" style="display:none; color:red;">No attendance data available for the selected date.</p>
+</div>
+
+<p id="limitMessage" style="color: red;"></p> <!-- Display limit message here -->
+
+<script src="./scrpt.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Space above the table */
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.status-select {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.action-buttons {
+    margin: 10px 0;
+}
+
+.save-button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    width: 190px;
+    height: 46px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    background: linear-gradient(to right, #0077b6 50%, #ffffff 50%);
+    background-position: left bottom;
+    transition: background-position 0.4s ease-in-out, color 0.4s ease-in-out;
+    background-size: 200% 100%;
+    color: #fff;
+    margin-left: 100px;
+    font-family: "Noto Sans", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.save-button:hover {
+    background-position: right bottom; /* Move gradient to the right */
+    color: #0077b6; /* Change text color */
+    border: 2px solid #0077b6;
+    font-weight: 500;
+}
+.clear-button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 684px; /* Space between buttons */
+    width: 190px;
+    height: 46px;
+    font-size: 17px;
+    font-weight: 500;
+    background: linear-gradient(to right, red 50%, #ffffff 50%);
+    background-position: left bottom;
+    transition: background-position 0.4s ease-in-out, color 0.4s ease-in-out;
+    background-size: 200% 100%;
+    color: #fff;
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.clear-button:hover {
+    background-position: right bottom; /* Move gradient to the right */
+    color: red; /* Change text color */
+    border: 2px solid red;
+    font-weight: 500;
+}
+#attendanceDate {
+    padding: 5px;
+    margin-left: 10px;
+}
+.student-management {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Noto Sans", sans-serif;
+    color: #0077b6;
+    text-align: center;
+    padding: 20px 0;
+}
+.student-name {
+    padding: 10px 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    border: 2px solid #0077b6;
+    color: #0077b6;
+}
+.student-name::placeholder {
+    color: #0077b6;
+}
+.student-name:focus {
+    border: 2px solid #0077b6;
+    outline: none;
+}
+.flex-align-input {
+    display: flex;
+    justify-content: center;
+}
+.second-date-div-main {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.date-main {
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    margin-right: 20px;
+    border: 2px solid #0077b6;
+    color: #0077b6;
+    font-weight: 500;
+    font-family: "Noto Sans", sans-serif;
+}
+.date-main1 {
+    width: 150px;
+    height: 44px;
+    font-size: 17px;
+    margin-right: 20px;
+    border: 2px solid #0077b6;
+    color: #0077b6;
+    font-weight: 500;
+    font-family: "Noto Sans", sans-serif;
+}
+.date-main2 {
+    width: 150px;
+    height: 44px;
+    font-size: 17px;
+    margin-right: 20px;
+    cursor: pointer;
+    background: #90e0ef;
+    border: none;
+    background: linear-gradient(to right, #0077b6 50%, #ffffff 50%);
+    background-position: left bottom;
+    transition: background-position 0.4s ease-in-out, color 0.4s ease-in-out;
+    background-size: 200% 100%;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+}
+.date-main2:hover {
+    background-position: right bottom; /* Move gradient to the right */
+    color: #0077b6; /* Change text color */
+    border: 2px solid #0077b6;
+    font-weight: 500;
+}
+th {
+    border: 2px solid #0077b6;
+    color: #0077b6;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 17px;
+    width: 100px;
+}
+td {
+    border: 2px solid #0077b6;
+    color: #0077b6;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 17px;
+    width: 100px;
+}
+td button {
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
+    margin-right: 20px;
+    cursor: pointer;
+    background: #90e0ef;
+    border: none;
+    background: linear-gradient(to right, #0077b6 50%, #ffffff 50%);
+    background-position: left bottom;
+    transition: background-position 0.4s ease-in-out, color 0.4s ease-in-out;
+    background-size: 200% 100%;
+    color: #fff;
+}
+td button:hover {
+    background-position: right bottom; /* Move gradient to the right */
+    color: #0077b6; /* Change text color */
+    border: 2px solid #0077b6;
+    font-weight: 500;
+}
+.absent-p-tag {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 17px;
+    margin-top: 20px;
+    color: #0077b6;
+}
+.cheack-date-input {
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    margin-right: 20px;
+    border: 2px solid #0077b6;
+    color: #0077b6;
+    font-weight: 500;
+    font-family: "Noto Sans", sans-serif;
+    padding: 5px;
+    margin-left: 650px;
+    margin-top: -50px;
+    position: absolute;
+}
+.check-atendence-selected-date {
+    width: 350px;
+    height: 44px;
+    font-size: 17px;
+    margin-right: 20px;
+    cursor: pointer;
+    background: #90e0ef;
+    border: none;
+    background: linear-gradient(to right, #0077b6 50%, #ffffff 50%);
+    background-position: left bottom;
+    transition: background-position 0.7s ease-in-out, color 0.4s ease-in-out;
+    background-size: 200% 100%;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    margin-left: 860px;
+    position: absolute;
+    margin-top: -50px;
+}
+.check-atendence-selected-date:hover {
+    background-position: right bottom; /* Move gradient to the right */
+    color: #0077b6; /* Change text color */
+    border: 2px solid #0077b6;
+    font-weight: 500;
+}
+.selected-date {
+    display: none;
+}
+.notada {
+    color: red;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
